@@ -1,19 +1,20 @@
 <?php
     
+    $user = $_GET['user'];
     $a = $_GET["a"];
     $b = $_GET["b"];
     $c = $_GET["c"];
-    
-    if ($a > $b && $c){
-        echo "O número $a é o maior";
-    }
-    if ($b > $a && $c){
-        echo "O número $b é o maior";
-        break;
-    }
-    if ($c > $b && $c){
-        echo "O número $c é o maior";
-    }
 
+    $maior = 0;
 
+    if ($a > $b && $a > $c){
+        $maior = $a;
+    }elseif ($b > $a && $b > $c){
+        $maior = $b;
+    }elseif($c > $a && $c > $b){
+        $maior  = $c;
+    }else{
+
+    }
+    echo "O maior número é: $maior"
 ?>
